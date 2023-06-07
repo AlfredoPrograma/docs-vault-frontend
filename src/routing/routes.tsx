@@ -1,5 +1,7 @@
 export const routes = {
   HOME: '/',
-  AUTH: '/auth',
+  AUTH: {
+    SIGN_IN: '/sign-in'
+  },
   DASHBOARD: '/dashboard'
 };
