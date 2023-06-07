@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { AuthLayout, DashboardLayout } from '@/layouts';
 
 import { SignIn, SignUp } from '@/pages/Auth';
+import { Home } from '@/pages/Dashboard';
 
 import { routes } from './routes';
 
@@ -25,7 +26,12 @@ export const router = createBrowserRouter([
     ]
   },
   {
-    path: routes.DASHBOARD,
-    element: <DashboardLayout />
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: routes.DASHBOARD.HOME,
+        element: <Home />
+      }
+    ]
   }
 ]);
