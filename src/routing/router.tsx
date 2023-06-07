@@ -5,6 +5,7 @@ import { AuthLayout, DashboardLayout } from '@/layouts';
 import { SignIn, SignUp } from '@/pages/Auth';
 
 import { routes } from './routes';
+import { Home } from '@/pages/Dashboard';
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +26,12 @@ export const router = createBrowserRouter([
     ]
   },
   {
-    path: routes.DASHBOARD,
-    element: <DashboardLayout />
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: routes.DASHBOARD.HOME,
+        element: <Home />
+      }
+    ]
   }
 ]);
