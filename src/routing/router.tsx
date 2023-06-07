@@ -1,19 +1,21 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { AuthLayout } from './layouts/Auth';
-import { DashboardLayout } from './layouts/Dashboard';
+import { AuthLayout } from '@/layouts/Auth';
+import { DashboardLayout } from '@/layouts/Dashboard';
+
+import { routes } from './routes';
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: routes.HOME,
     element: <h1>Home</h1>
   },
   {
-    path: '/auth',
+    path: routes.AUTH,
     element: <AuthLayout />
   },
   {
-    path: '/dashboard',
+    path: routes.DASHBOARD,
     element: <DashboardLayout />
   }
 ]);
