@@ -1,10 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { AuthLayout } from '@/layouts/Auth';
-import { DashboardLayout } from '@/layouts/Dashboard';
+import { AuthLayout, DashboardLayout } from '@/layouts';
 
-import { SignIn } from '@/pages/Auth/SignIn';
-import { SignUp } from '@/pages/Auth/SignUp';
+import { SignIn, SignUp } from '@/pages/Auth';
 
 import { routes } from './routes';
 
