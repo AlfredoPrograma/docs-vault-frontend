@@ -1,15 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import { expect, describe, it } from 'vitest';
 
-import { SignIn } from '../SignIn';
+import { SignUp } from '../SignUp';
 import { testIds } from '../constants/testIds';
 
-describe('SignIn', () => {
-  it('renders SignIn page', () => {
+describe('SignUp', () => {
+  it('renders SignUp page', () => {
     // Arrange & Act
-    render(<SignIn />);
+    render(<SignUp />);
 
-    const component = screen.getByTestId(testIds.SIGN_IN);
+    const component = screen.getByTestId(testIds.SIGN_UP);
 
     // Assert
     expect(component).toBeInTheDocument();
